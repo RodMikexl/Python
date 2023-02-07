@@ -98,6 +98,7 @@ for name in namelist:
 '''
 
 #查： 【in  .  not  in】
+'''
 namelist = ["Mike","Mkiex","Rock"]
 
 findName = input("请输入要查找的人名:")
@@ -106,7 +107,61 @@ if findName in namelist:
     print("在名单中找到相同的名字")
 else:
     print("没有找到")
+'''
+
+mylist = ["a","b","c","a","b"]
+
+'''
+print(mylist.index("a", 1, 4)) #查找范围 可以用来查找指定对应下标的元素， 找到并返回对应的下标位置
+
+print(mylist.index("a", 1, 3))  #范围区间 左闭右开 [1,3）
+                                #找不到会报错
+'''
+
+'''
+print(mylist.count("c"))   #统计某个元素出席几次
+'''
+
+#排序和反转
+'''
+a = [1,4,2,3]
+print(a)
+a.reverse()     #将列表所有元素反转
+print(a)
+a.sort()       #升序
+print(a)
+a.sort(reverse=True)  #降序
+print(a)
+'''
 
 
+# schoolName=[[],[],[]]    #有3个元素的空列表，每个元素都有给空列表
+'''
+schoolName= [["school1","school2"],["school3","school4","school5"],["school6","school7"]]
 
+# print(schoolName[1][2])  #二维数组
 
+for j in range(len(schoolName)):
+    for i in range (len(schoolName[j])):
+        print(schoolName[j][i])    #打印所有的元素列表
+'''
+
+#八个老师随机分配3个办公室
+
+import random
+offices = [[],[],[]]
+
+name= ["A","B","C","D","E","F","G","H"]
+
+for name in name:
+    index = random.randint(0,2)
+    offices[index].append(name)
+
+i = 1
+for office in offices:
+    print("办公室%d的人数:%d"%(i,len(office)))
+    i = i + 1
+    for name in office:
+        print("%s"%name,end="\t")
+    print("\n")
+    print("-"*20)
