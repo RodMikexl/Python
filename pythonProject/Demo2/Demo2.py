@@ -147,7 +147,7 @@ for j in range(len(schoolName)):
 '''
 
 #八个老师随机分配3个办公室
-
+'''
 import random
 offices = [[],[],[]]
 
@@ -165,3 +165,14 @@ for office in offices:
         print("%s"%name,end="\t")
     print("\n")
     print("-"*20)
+'''
+
+products=[["iphone",6888],["Macpro",14800],["小米6",2499],["Book",60],["Nike",699]]
+
+i=0
+print("-----商品列表-----")
+for i in range(len(products)):
+    print(i,products[i][0],products[i][1],end="\n")
+    i=i+1
+
+
