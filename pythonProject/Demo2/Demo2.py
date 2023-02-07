@@ -49,6 +49,7 @@ print("---增加后，名单列表的数据---")
 for name in namelist:
     print(name)
 '''
+
 '''
 a = [1,2]
 b = [3,4]
@@ -66,5 +67,46 @@ a.insert(1,3)   #第一个变量表示下标，第二个表示元素（对象）
 print(a)      #输出为：[0, 3, 1, 2] 指定下表位置插入元素
 '''
 
-#删减的方法
+#删减的方法 【del】 【pop】
+'''
+movieName = ["movie1", "movie2","movie3","movie4","movie2"]
+print("---删除前，movie列表的数据---")
+for name in movieName:
+    print(name)
+
+#del movieName[2]  #在指定位置删除一个元素
+#movieName.pop()   #弹出末尾最后一个元素
+movieName.remove("movie2") # #删除指定内容的元素 当出现2个时，则只会删除第一个
+
+print("---删除后，movie列表的数据---")
+for name in movieName:
+    print(name)
+'''
+
+#改 【】
+'''
+namelist = ["Mike","Mkiex","Rock"]
+print("---增加前，名单列表的数据---")
+for name in namelist:
+    print(name)
+
+namelist[1] = "红" #修改指定下表元素内容
+
+print("---增加后，名单列表的数据---")
+for name in namelist:
+    print(name)
+'''
+
+#查： 【in  .  not  in】
+namelist = ["Mike","Mkiex","Rock"]
+
+findName = input("请输入要查找的人名:")
+
+if findName in namelist:
+    print("在名单中找到相同的名字")
+else:
+    print("没有找到")
+
+
+
 
