@@ -206,8 +206,16 @@ while True:
             i += 1
     elif item == "q":
         print("你购买的商品如下：", end="\n")
+        # total = 0
+        # for j in range(0, i):
+        #     total += int(bag[j][1])
+        #     print(id[j], bag[j][0], bag[j][1], end="\n")
+        # print("共计%d元" % total)
+        # break    错误演示
         total = 0
         for j in range(0, i):
+            if j >= len(bag):
+                break
             total += int(bag[j][1])
             print(id[j], bag[j][0], bag[j][1], end="\n")
         print("共计%d元" % total)
