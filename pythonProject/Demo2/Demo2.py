@@ -175,4 +175,7 @@ for i in range(len(products)):
     print(i,products[i][0],products[i][1],end="\n")
     i=i+1
 
+id=[]
+money=[]
 
+print("你想选择那件商品:")
