@@ -189,22 +189,29 @@ products = [["iphone",6888],["Macpro",14800],["小米6",2499],["Coffee",31],["Bo
 id = []
 bag = []
 i = 0
-while 1:
+print("-----商品列表-----")
+for i in range(len(products)):
+    print(i,products[i][0],products[i][1],end="\n")
+    i=i+1
+
+while True:
     item = input("请输入要购买物品编号(只能选择0~5），按q结算：")
-    if item >= 0 and item < 6:
-        if item=="q":
-            print("你购买的商品如下：",end = "\n")
-            total = 0
-            for j in range(0,i):
-                total += int(bag[j][1])
-                print(id[j],bag[j][0],bag[j][1],end="\n")
-            print("共计%d元"%total)
-            break
+    if item.isdigit():
+        item = int(item)
+        if item < 0 or item > 5:
+            print("item cannot be more than 5 or less than 0")
         else:
-            item = int(item)
             id.append(item)
             bag.append(products[item])
-            i+=1
+            i += 1
+    elif item == "q":
+        print("你购买的商品如下：", end="\n")
+        total = 0
+        for j in range(0, i):
+            total += int(bag[j][1])
+            print(id[j], bag[j][0], bag[j][1], end="\n")
+        print("共计%d元" % total)
+        break
     else:
-        print("请输入正确：")
+        print("请输入正确的物品编号或结算命令.")
 
