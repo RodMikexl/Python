@@ -167,15 +167,44 @@ for office in offices:
     print("-"*20)
 '''
 
-products=[["iphone",6888],["Macpro",14800],["小米6",2499],["Book",60],["Nike",699]]
+# products=[["iphone",6888],["Macpro",14800],["小米6",2499],["Book",60],["Nike",699]]
+#
+# i=0
+# print("-----商品列表-----")
+# for i in range(len(products)):
+#     print(i,products[i][0],products[i][1],end="\n")
+#     i=i+1
+#
+# id=[]
+# money=0
+# i=input(("请选择对应的商品输入，加入购物车:"))
+# while i !="e":
+#     i = int(i)
+#     id.append(products[i])
+#     money += products[i][1]
+#     i = input("如继续购买请将对应的标号输入,输入e则结束购物:")
+# print("您购买的货物有%s,价格共计%d" % (id, money))
 
-i=0
-print("-----商品列表-----")
-for i in range(len(products)):
-    print(i,products[i][0],products[i][1],end="\n")
-    i=i+1
+products = [["iphone",6888],["Macpro",14800],["小米6",2499],["Coffee",31],["Book",60],["Nike",699]]
+id = []
+bag = []
+i = 0
+while 1:
+    item = input("请输入要购买物品编号(只能选择0~5），按q结算：")
+    if item >= 0 and item < 6:
+        if item=="q":
+            print("你购买的商品如下：",end = "\n")
+            total = 0
+            for j in range(0,i):
+                total += int(bag[j][1])
+                print(id[j],bag[j][0],bag[j][1],end="\n")
+            print("共计%d元"%total)
+            break
+        else:
+            item = int(item)
+            id.append(item)
+            bag.append(products[item])
+            i+=1
+    else:
+        print("请输入正确：")
 
-id=[]
-money=[]
-
-print("你想选择那件商品:")
