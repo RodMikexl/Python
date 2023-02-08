@@ -187,7 +187,7 @@ for office in offices:
 
 products = [["iphone",6888],["Macpro",14800],["小米6",2499],["Coffee",31],["Book",60],["Nike",699]]
 id = []
-bag = []
+money = []
 i = 0
 print("-----商品列表-----")
 for i in range(len(products)):
@@ -202,7 +202,7 @@ while True:
             print("item cannot be more than 5 or less than 0")
         else:
             id.append(item)
-            bag.append(products[item])
+            money.append(products[item])
             i += 1
     elif item == "q":
         print("你购买的商品如下：", end="\n")
@@ -214,10 +214,10 @@ while True:
         # break    错误演示
         total = 0
         for j in range(0, i):
-            if j >= len(bag):
+            if j >= len(money):
                 break
-            total += int(bag[j][1])
-            print(id[j], bag[j][0], bag[j][1], end="\n")
+            total += int(money[j][1])
+            print(id[j], money[j][0], money[j][1], end="\n")
         print("共计%d元" % total)
         break
     else:
