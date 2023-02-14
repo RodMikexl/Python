@@ -28,3 +28,33 @@ print(content)
 f.close()
 '''
 
+#打印使用内容并且隔行
+'''
+f = open("test.txt","r")
+content = f.readlines()
+
+#print(content)
+
+i = 1
+for temp in content:
+    print("%d:%s"%(i,temp))
+    i= i+1
+
+f.close()
+'''
+
+'''
+f = open("test.txt","r")
+content = f.readline() #读一行
+print("1:%s"%content,end="") #end不用空一行在写
+
+content = f.readline()
+print("2:%s"%content)
+
+f.close()
+'''
+
+#文件重新命名
+import os
+
+os.rename("test.txt","test1.txt")
